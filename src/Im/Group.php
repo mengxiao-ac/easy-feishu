@@ -141,6 +141,7 @@ class Group extends AbstractAPI
     {
         return $this->parseJSON('get', [
             self::API_GET_IM_CHATS_MEMBERS.$chatsId.'/members',
+            $query
         ]);
     }
 
