@@ -154,7 +154,8 @@ class Group extends AbstractAPI
     public function botChats(array $query = ['user_id_type'=>'open_id'])
     {
         return $this->parseJSON('get', [
-            self::API_GET_IM_CHATS.'?'.http_build_query($query),
+            self::API_GET_IM_CHATS,
+            $query,
         ]);
     }
 
